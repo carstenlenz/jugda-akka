@@ -1,7 +1,5 @@
 package de.carsten_lenz.jugda
 
-
-import java.net.{URLEncoder, URLDecoder}
 import java.util.concurrent.TimeUnit
 
 import akka.actor._

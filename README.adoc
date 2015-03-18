@@ -1,0 +1,36 @@
+= Winner Picker for JUG DA based on Akka
+:icons: font
+:source-highlighter: coderay
+
+This is a simple Akka application that runs a virtual ball passing game.
+Every Player is instantiated as an actor and throws a ball at some randomly
+chosen other player (meaning: sends a 'ball thrown' message to another player
+actor).
+
+To have a little interactive feeling you should start a Scala REPL. To do this,
+first start an interactive SBT session:
+[source, bash]
+----
+projectDir$ ./activator
+----
+
+You will see something like this:
+[source, bash]
+----
+[info] Loading project definition from <PROJECTDIR>/project
+[info] Updating {file:<PROJECTDIR>/project/}jugda-akka-build...
+[info] Done updating.
+[info] Set current project to jugda-akka (in build file:<PROJECTDIR>)
+>
+----
+Now start the REPL by typing `console`.
+[source, bash]
+----
+> console
+scala>
+----
+Now you can manually start the actor system and kick off a game :)
+[source, scala]
+----
+include::src/main/scala/de/carsten_lenz/jugda/Game.scala[tags=sample]
+----

@@ -12,4 +12,5 @@ trait PlayerActorsSupport {
   def random: Random
 
   def randomPlayer() = players(random.nextInt(players.size))
+
 }
